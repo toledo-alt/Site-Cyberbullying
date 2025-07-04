@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Boldonse&family=Caprasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Special+Gothic+Expanded+One&family=VT323&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url(../assets/Ceuu.png);
+  background-repeat: no-repeat;
+  background-size: cover;       
+  background-position: center;  
+  background-attachment: fixed;
+}
+
+.head {
+  position: relative;
+  height: 120px; 
+}
+
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu li a {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  margin: 20px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.menu li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.menu li a::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.menu li a:hover {
+  color: #000;
+}
+
+.menu li a:hover::before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.menu li a:hover::after {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+
+.container {
+  font-family: "Press Start 2P", system-ui;
+  display: flex;
+  font-size: 20px;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 120px;
+}
+
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-shadow: 8px 8px black;
+}
+
+
+.video {
+  border-radius: 16px;
+  border: 2px solid whitesmoke;
+}
+
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+
+.botao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bot {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid white;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #faf9f9;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  transition: all 0.2s ease-in;
+}
+
+.bot:hover {
+  background: white;
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  transition: all 0.2s ease-out;
+  color: #000;
+}
+
+.bot:hover::before {
+  animation: sh02 0.5s 0s linear;
+}
+
+
+.gameFooter {
+  background-image: url(../assets/chaoVerde.png);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: bottom;
+  height: 190px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
